@@ -27,4 +27,34 @@ output "cli" {           # input have to provide in cli
   value = var.cli
 }
 
-variable "input" {}
+variable "input" {}      # no input given
+
+
+
+variable "sample5" {
+  default = "hello"
+}
+
+variable "sample6" {
+  default = [
+  "hello",
+  100,
+  true,
+  "world"
+  ]
+}
+
+variable "sample7" {
+  default = {
+    String = "Hello",
+    number = 100
+    boolean = true
+  }
+}
+
+
+output "types" {
+  value = "Variable sample5 - ${var.sample5} ,first Value in list - ${var.sample6[0]}, Boolean value of Map - ${var.sample7[boolean]}"
+}
+
+
