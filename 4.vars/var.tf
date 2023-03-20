@@ -60,7 +60,7 @@
 variable "devops" {
   default = [
     {
-      course_name  = "aws"
+      course_names = "aws"
       trainer_name = "nikhil"
     },
     {
@@ -70,8 +70,6 @@ variable "devops" {
   ]
 }
 
-output "course_names" {
-  value = var.devops.*.course_name
+output "courses" {
+  value = var.devops.*.trainer_name
 }
-
-
