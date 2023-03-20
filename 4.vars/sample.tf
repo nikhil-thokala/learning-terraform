@@ -1,5 +1,5 @@
 variable "sample" {
-  default = "Hello World"  ##strings must be double quote
+  default = "Hello World"  #strings must be double quote
 }
 
 output "sample" {
