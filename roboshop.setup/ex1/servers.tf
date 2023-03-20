@@ -1,4 +1,4 @@
-resource "aws instance" "frontend" {
+resource "aws_instance" "frontend" {
   ami                    = "ami-0089b8e98cd95257d"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-0443b175ebd7809fa"]
@@ -7,7 +7,7 @@ resource "aws instance" "frontend" {
   }
 }
 
-resource "aws instance" "cart" {
+resource "aws_instance" "cart" {
   ami                    = "ami-0089b8e98cd95257d"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-0443b175ebd7809fa"]
@@ -16,7 +16,7 @@ resource "aws instance" "cart" {
   }
 }
 
-resource "aws instance" "catalogue" {
+resource "aws_instance" "catalogue" {
   ami                    = "ami-0089b8e98cd95257d"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-0443b175ebd7809fa"]
@@ -26,7 +26,7 @@ resource "aws instance" "catalogue" {
 }
 
 
-resource "aws instance" "user" {
+resource "aws_instance" "user" {
   ami                    = "ami-0089b8e98cd95257d"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-0443b175ebd7809fa"]
@@ -35,7 +35,7 @@ resource "aws instance" "user" {
   }
 }
 
-resource "aws instance" "shipping" {
+resource "aws_instance" "shipping" {
   ami                    = "ami-0089b8e98cd95257d"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-0443b175ebd7809fa"]
@@ -44,7 +44,7 @@ resource "aws instance" "shipping" {
   }
 }
 
-resource "aws instance" "payment" {
+resource "aws_instance" "payment" {
   ami                    = "ami-0089b8e98cd95257d"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-0443b175ebd7809fa"]
@@ -53,7 +53,7 @@ resource "aws instance" "payment" {
   }
 }
 
-resource "aws instance" "mongodb" {
+resource "aws_instance" "mongodb" {
   ami                    = "ami-0089b8e98cd95257d"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-0443b175ebd7809fa"]
@@ -62,7 +62,7 @@ resource "aws instance" "mongodb" {
   }
 }
 
-resource "aws instance" "mysql" {
+resource "aws_instance" "mysql" {
   ami                    = "ami-0089b8e98cd95257d"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-0443b175ebd7809fa"]
@@ -71,7 +71,7 @@ resource "aws instance" "mysql" {
   }
 }
 
-resource "aws instance" "redis" {
+resource "aws_instance" "redis" {
   ami                    = "ami-0089b8e98cd95257d"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-0443b175ebd7809fa"]
@@ -80,7 +80,7 @@ resource "aws instance" "redis" {
   }
 }
 
-resource "aws instance" "rabbitmq" {
+resource "aws_instance" "rabbitmq" {
   ami                    = "ami-0089b8e98cd95257d"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-0443b175ebd7809fa"]
