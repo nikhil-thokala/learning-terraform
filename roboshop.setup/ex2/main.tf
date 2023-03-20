@@ -12,5 +12,5 @@ resource "aws_instance" "frontend" {
 }
 
 variable "instances" {
-  default = [ "cart", "catalogue", "mongodb", "payment", "shipping" ]
+  default = [ "cart", "catalogue", "mongodb", "payment", "mysql" ]
 }
