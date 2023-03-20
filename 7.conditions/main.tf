@@ -5,6 +5,10 @@ resource "aws_instance" "test" {
 
 variable "instance_type" {}
 
-output "type" {
-  value = var.instance_type
+variable "create_instance" {}
+
+resource "aws_instance" "test" {
+  count =var.create_instance == "true" ? 1 : 0
+  ami = "ami-0089b8e98cd95257d"
+  instance_type = var.instance_type == "" ? "t3.micro" : var.instance_type
 }
