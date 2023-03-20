@@ -4,3 +4,7 @@ resource "aws_instance" "test" {
 }
 
 variable "instance_type" {}
+
+output "type" {
+  value = var.instance_type
+}
