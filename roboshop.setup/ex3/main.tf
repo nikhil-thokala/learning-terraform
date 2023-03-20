@@ -28,16 +28,16 @@ variable "instances" {
 }
 
 #output "ec2" {
-#  value = aws_instance.instances["catalogue"].public_ip
+#  value = aws_instance.instances["catalogue"].public_ip    # for specific ip address in a instance
 #}
 #
 #output "ec2" {
-#  value = [for k, v in aws_instances : v.public_ip]
+#  value = [for k, v in aws_instances : v.public_ip]        #for all instances only ip address as list without names
 #}
 
 
 output "ec2" {
-  value = [for k, v in aws_instance.instances : "${k} - ${v.public_ip}"]
+  value = [for k, v in aws_instance.instances : "${k} - ${v.public_ip}"]  #for all instances & ip address with names
 }
 
 
