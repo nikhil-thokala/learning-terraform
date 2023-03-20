@@ -57,4 +57,21 @@ output "types" {
   value = "Variable sample5 - ${var.sample5} ,first Value in list - ${var.sample6[0]}, Boolean value of Map = ${var.sample7["boolean"]}"
 }
 
+variable "devops" {
+  default = [
+    {
+      course_name  = "aws"
+      trainer_name = "nikhil"
+    },
+    {
+      course_name = "terraform"
+      trainer_name = "raghu"
+    }
+  ]
+}
+
+output "course_names" {
+  value = var.devops.*.course_name
+}
+
 
