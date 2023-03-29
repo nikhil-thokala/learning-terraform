@@ -2,6 +2,9 @@ module "sg" {
   source = "./sg"
 }
 
+variable "instances" {
+  default = ""
+}
 module "ec2" {
   for_each      = var.instances
   source        = "./ec2"
@@ -10,6 +13,9 @@ module "ec2" {
   sg_id         = module.sg.sg_id
 }
 
+variable "instances" {
+  default = ""
+}
 module "route53" {
   for_each      = var.instances
   source        = "./route53"
