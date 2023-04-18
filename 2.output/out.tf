@@ -3,5 +3,5 @@ output "Sample" {
 }
 
 output "Sample1" {
-  value = "Hello World"
+  value = "Hello wWorld"
 }
